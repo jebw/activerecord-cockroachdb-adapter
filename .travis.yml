@@ -1,5 +1,21 @@
-sudo: false
 language: ruby
 rvm:
-  - 2.4.0
-before_install: gem install bundler -v 1.14.3
+  - 2.2.8
+  - 2.3.5
+  - 2.4.2
+  - ruby-head
+env:
+  matrix:
+    - "AR_VERSION=4.0.13"
+    - "AR_VERSION=4.2.10"
+    - "AR_VERSION=5.0.6"
+    - "AR_VERSION=5.1.4"
+# before_install:
+#   # FIXME(joey): init cockroach
+#   - mysql -e "create database activerecord_unittest;"
+
+matrix:
+  fast_finish: true
+
+notifications:
+  email: false

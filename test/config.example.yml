@@ -1,0 +1,11 @@
+default_connection: 'cockroachdb'
+
+connections:
+  cockroachdb:
+    arunit:
+      username: rails
+      encoding: utf8
+      collation: utf8_unicode_ci
+    arunit2:
+      username: rails
+      encoding: utf8
